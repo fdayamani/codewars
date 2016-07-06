@@ -1,6 +1,5 @@
 package twicelinear;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -28,8 +27,12 @@ public class DoubleLinearTest {
         testElementOfSequence(2, 4);
     }
 
+    @Test public void
+    doesNotAllowDuplicatesInSequence() {
+        testElementOfSequence(14, 39);
+    }
+
     @Test
-    @Ignore
     public void test() {
         System.out.println("Fixed Tests dblLinear");
         testElementOfSequence(10, 22);

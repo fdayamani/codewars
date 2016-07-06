@@ -1,8 +1,12 @@
 package twicelinear;
 
+import org.apache.commons.collections4.list.SetUniqueList;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static org.apache.commons.collections4.list.SetUniqueList.setUniqueList;
 
 public class DoubleLinear {
 
@@ -14,6 +18,7 @@ public class DoubleLinear {
             sequence.add(3  * sequence.get(i) + 1);
         }
         Collections.sort(sequence);
-        return sequence.get(n);
+        SetUniqueList<Integer> removedDuplicates = setUniqueList(sequence);
+        return removedDuplicates.get(n);
     }
 }
