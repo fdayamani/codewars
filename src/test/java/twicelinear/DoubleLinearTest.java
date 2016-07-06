@@ -23,6 +23,11 @@ public class DoubleLinearTest {
         testElementOfSequence(1, 3);
     }
 
+    @Test public void
+    elementTwo_Is4() {
+        testElementOfSequence(2, 4);
+    }
+
     @Test
     @Ignore
     public void test() {
